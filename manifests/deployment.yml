@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: daniloouriquepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: daniloouriquepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: daniloouriquepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: daniloouriquepipelinesjavascriptdocker 
+          image: aksacr0001.azurecr.io/daniloouriquepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
